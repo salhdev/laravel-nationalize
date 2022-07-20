@@ -66,7 +66,7 @@ test('200 response is handled correctly when passing a single name', function ()
         ),
     ]);
 
-    expect( $this->service->name('Michael')->get() )
+    expect($this->service->name('Michael')->get())
         ->toBeInstanceOf(NationalizeResponse::class)
         ->status->toBe(200)
         ->limit->toBe(1000)
@@ -99,7 +99,7 @@ test('200 response is handled correctly when passing multiple names using name()
         ),
     ]);
 
-    expect( $this->service->name(['Michael', 'Kevin'])->get() )
+    expect($this->service->name(['Michael', 'Kevin'])->get())
         ->toBeInstanceOf(NationalizeResponse::class)
         ->status->toBe(200)
         ->limit->toBe(1000)
@@ -132,7 +132,7 @@ test('200 response is handled correctly when passing multiple names using names(
         ),
     ]);
 
-    expect( $this->service->names(['Michael', 'Kevin'])->get() )
+    expect($this->service->names(['Michael', 'Kevin'])->get())
         ->toBeInstanceOf(NationalizeResponse::class)
         ->status->toBe(200)
         ->limit->toBe(1000)

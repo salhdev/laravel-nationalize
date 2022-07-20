@@ -23,7 +23,7 @@ it('sets data correctly', function () {
         ],
     ];
 
-    expect( new NationalizePrediction($data) )
+    expect(new NationalizePrediction($data))
         ->name->toBe('Michael')
         ->countries->toHaveCount(3)->toBe([
             'US' => 0.08986482266532715,
@@ -51,7 +51,7 @@ it('sets data correctly skipping predictions without country_id', function () {
         ],
     ];
 
-    expect( new NationalizePrediction($data) )
+    expect(new NationalizePrediction($data))
         ->name->toBe('Michael')
         ->countries->toHaveCount(2)->toBe([
             'US' => 0.08986482266532715,
